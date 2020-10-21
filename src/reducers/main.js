@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import currentVideo from './currentVideo.js';
 import videoList from './videoList.js';
-
+//will be invoked ALWAYS
 var rootReducer = () => {};
 
 //TODO: define the root reducer for this app
