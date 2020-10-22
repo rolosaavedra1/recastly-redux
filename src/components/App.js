@@ -4,9 +4,9 @@ import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
 import { connect } from 'react-redux';
 //import search action creator
-import handleVideoSearch from 'src/actions/search.js';
-import currentVideo from 'src/actions/currentVideo.js';
-
+import SearchContainer from '../containers/SearchContainer.js';
+import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
+import VideoListContainer from '../containers/VideoListContainer.js';
 
 class App extends React.Component {
   //constructor(props) {
@@ -51,18 +51,15 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
-            <Search getYouTubeVideos={props.handleVideoSearch}/>
+            <SearchContainer/>
           </div>
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayer video={this.state.currentVideo}/>
+            <VideoPlayerContainer/>
           </div>
           <div className="col-md-5">
-            <VideoList
-              handleVideoListEntryTitleClick={props.handleVideoListEntryTitleClick}
-              videos={this.state.videos}
-            />
+            <VideoListContainer/>
           </div>
         </div>
       </div>
@@ -71,22 +68,22 @@ class App extends React.Component {
 }
 
 
-const mapStateToProps = (state) => ({
-  videos: state.videos,
-  currentVideo: state.currentVideo,
-  value: state.value
-});
+// const mapStateToProps = (state) => ({
+//   videos: state.videos,
+//   currentVideo: state.currentVideo,
+//   value: state.value
+// });
 
-const mapDispatchToProps = (dispatch) => {
-  // listener functions
-  return {
-    handleVideoListEntryTitleClick: (video) => dispatch(currentVideo(video)),
-    handleVideoSearch: (query) => handleVideoSearch(query)
-  };
-};
+// const mapDispatchToProps = (dispatch) => {
+//   // listener functions
+//   return {
+//     handleVideoListEntryTitleClick: (video) => dispatch(currentVideo(video)),
+//     handleVideoSearch: (query) => handleVideoSearch(query)
+//   };
+// };
 
-const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
+// const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 
 
 
-export default AppContainer;
+export default App;

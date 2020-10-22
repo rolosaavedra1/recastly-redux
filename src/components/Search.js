@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 class Search extends React.Component {
   //constructor(props) {
   //  super(props);
@@ -26,7 +27,7 @@ class Search extends React.Component {
           className="form-control"
           type="text"
           value={props.state.value}
-          onChange={() => props.handleVideoSearch(value)}
+          onChange={() => props.handleSearchInputChange(value)}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
