@@ -21,10 +21,16 @@
     "popper.js": "^1.12.9",
     "react": "^15.6.1",
     "react-dom": "^15.4.2",
+<<<<<<< HEAD
     "react-redux": "^5.0.6",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "2.2.0",
+=======
+    "react-redux": "^5.1.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+>>>>>>> 0b527974bcf95513f33559a5f4a17c3722864a2d
     "thunk": "0.0.1"
   },
   "devDependencies": {

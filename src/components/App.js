@@ -23,8 +23,13 @@ class App extends React.Component {
 
   /*
   componentDidMount() {
+<<<<<<< HEAD
     this.getYouTubeVideos('hydroflask');
   } */
+=======
+    this.getYouTubeVideos('armenia azerbajan');
+  }
+>>>>>>> 0b527974bcf95513f33559a5f4a17c3722864a2d
 
   //handleVideoListEntryTitleClick(video) {
   //  this.setState({currentVideo: video});
