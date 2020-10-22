@@ -8,7 +8,7 @@ import handleVideoSearch from '../actions/search.js';
 //state and dispatch mappings.
 
 // handleSearchInputChange
-mapDispatchToProps = (dispatch) => ({
+var mapDispatchToProps = (dispatch) => ({
   handleSearchInputChange: (query) => dispatch(handleVideoSearch(query))
 });
 
