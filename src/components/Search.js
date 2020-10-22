@@ -1,21 +1,23 @@
 import React from 'react';
 
- 
+
 class Search extends React.Component {
-  constructor(props) {
-    super(props);
+  //constructor(props) {
+  //  super(props);
 
-    this.state = {
-      value: ''
-    };
-  }
-
-  handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
-    this.setState({
-      value: e.target.value
-    });
-  }
+  // this.state = {
+  //   value: ''
+  // };
+  //}
+  //should invoke a dispatch() for an action creator that changes the state.value
+  //should send a CB to ap
+  // handleInputChange(e) {
+  //   //
+  //   props.getYouTubeVideos(e.target.value);
+  //   this.setState({
+  //     value: e.target.value
+  //   });
+  // }
 
   render() {
     return (
@@ -23,8 +25,8 @@ class Search extends React.Component {
         <input
           className="form-control"
           type="text"
-          value={this.state.value}
-          onChange={this.handleInputChange.bind(this)}
+          value={props.state.value}
+          onChange={() => props.handleVideoSearch(value)}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
