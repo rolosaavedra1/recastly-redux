@@ -5,7 +5,6 @@ import rootReducer from './../reducers/main.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 
 // TODO:  Create your redux store, apply thunk as a middleware, and export it!
-<<<<<<< HEAD
 // const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 const store = createStore(rootReducer, {
   videos: [],
@@ -14,9 +13,3 @@ const store = createStore(rootReducer, {
 }, applyMiddleware(thunk));
 
 export default store;
-=======
-// This needs to have the following properties:
-// videos
-// currentVideo
-// searchValue
->>>>>>> 0b527974bcf95513f33559a5f4a17c3722864a2d
